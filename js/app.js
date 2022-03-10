@@ -143,6 +143,7 @@ const createPost = (post) => {
 };
 
 const showPosts = (posts) => {
+  document.getElementById("question-section").style.display = "block";
   const productsContainer = document.getElementById("posts");
   productsContainer.innerHTML = "";
 
@@ -162,6 +163,7 @@ const displayLikedPosts = () => {
 };
 
 const displayReportedPosts = () => {
+  document.getElementById("question-section").style.display = "none";
   document.getElementById("reported").innerHTML = "";
   const reportedPosts = getReportedPosts();
   reportedPosts.forEach((post) => {

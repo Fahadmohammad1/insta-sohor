@@ -88,7 +88,7 @@
         <h1>Reported posts</h1>
       </div>
     </main>
-    <section id="question-section" class="container mx-auto">
+    <section id="question-section" class="container mx-auto mb-5">
       <h1 class="text-center my-3">Question About Javascript</h1>
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">
@@ -110,11 +110,7 @@
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
-            <div class="accordion-body">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis quasi ad facilis dolores repudiandae omnis assumenda
-              dolore officiis voluptatem quam!
-            </div>
+            <div class="accordion-body"></div>
           </div>
         </div>
         <div class="accordion-item">
@@ -137,9 +133,24 @@
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Assumenda, neque consequatur? Consequatur qui molestias harum
-              dolorem quod necessitatibus voluptates a?
+              <p>
+                Event loop help javascript to do multiple work. In V8 engine
+                there are two things called heap and call stack. heap is a
+                region of memory. when we call a function it will go to the call
+                stack. Which is called stack of frame. than it will execute
+                called function one by one. But it execute the last called
+                function first. that's why it's called "last in first out
+                (LIFO)". When we call a asynchronous function like (setTimeout ,
+                setInterval, fetch) call stack send it to queue and continue
+                other function.After completing all frame event loop check if
+                the call stack free or not. If call stack is free its send the
+                queue funtion to call stack. When the task of queue is completed
+                it will send a signal to the call stack. And event loop carry
+                that signal. After completing the all frame call stack started
+                to execute the queue function. Queue work as "first in first out
+                (FIFO)". that means first function enterd in the queue will send
+                to call stack first and executed first.
+              </p>
             </div>
           </div>
         </div>
@@ -163,9 +174,36 @@
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt
-              reprehenderit quibusdam at assumenda natus minima laudantium iusto
-              deserunt eligendi itaque!
+              <h4>Local Storage:</h4>
+              <ul>
+                <li>
+                  localStorage stores data permanently. It will not expire even
+                  we close the browser. We can get our data back even after more
+                  than a year.
+                </li>
+                <li>
+                  localStorage data can be deleted only by clearing the cache
+                  memory of browser and also by javascript. It is a client side
+                  storage.
+                </li>
+                <li>
+                  Memory of localStorage is 10 MB. But some people says it is
+                  only 5 MB.
+                </li>
+              </ul>
+              <h4>Session Storage:</h4>
+              <ul>
+                <li>
+                  sessionStorage data is temporary. It wiil be vanished after we
+                  close the browser.
+                </li>
+                <li>
+                  session storage data work for a session only. When user close
+                  the tab or window it will delete the data automatically. It is
+                  also a client side storage.
+                </li>
+                <li>sessionStorage size is 5MB</li>
+              </ul>
             </div>
           </div>
         </div>

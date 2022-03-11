@@ -110,7 +110,14 @@
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
-            <div class="accordion-body"></div>
+            <div class="accordion-body">
+              Javscript runs in a engine which is called V8 engine. javascript
+              source code goes to the engine. V8 engine parse the code and make
+              Abstract Syntax Tree (AST). After that the code will compiled to
+              the Byte code. than byte codes are compiled to machine code by
+              Just in Time compiler (JIT). The last step is machine code runs on
+              the CPU. That's how javascript work.
+            </div>
           </div>
         </div>
         <div class="accordion-item">
@@ -141,13 +148,14 @@
                 called function one by one. But it execute the last called
                 function first. that's why it's called "last in first out
                 (LIFO)". When we call a asynchronous function like (setTimeout ,
-                setInterval, fetch) call stack send it to queue and continue
-                other function.After completing all frame event loop check if
-                the call stack free or not. If call stack is free its send the
-                queue funtion to call stack. When the task of queue is completed
-                it will send a signal to the call stack. And event loop carry
-                that signal. After completing the all frame call stack started
-                to execute the queue function. Queue work as "first in first out
+                setInterval, fetch) call stack send it to Web Api and continue
+                other function.Web API send the function to queue after complete
+                the work. After completing all frame event loop check if the
+                call stack free or not. If call stack is free its send the queue
+                funtion to call stack. When the task of queue is completed it
+                will send a signal to the call stack. And event loop carry that
+                signal. After completing the all frame call stack started to
+                execute the queue function. Queue work as "first in first out
                 (FIFO)". that means first function enterd in the queue will send
                 to call stack first and executed first.
               </p>
